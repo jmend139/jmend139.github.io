@@ -1,179 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../../../../favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mad Scientist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <title>MAD SCIENTIST</title>
+    <style>
+        /* .images{
+            object-fit: scale-down;
+        } */
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+        /* .row{
+            background-color: gold;
+        }
 
-  <!-- Custom styles for this template -->
-  <link href="jumbotron.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-    crossorigin="anonymous">
+        .jumbotron{
+            background-color: gold;
+        } */
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        
+        .panel-heading{
+            text-align: center;
+        }
+        .panel-body .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(0,0,0,0.7);
+        }
 
+        .panel-body:hover .overlay{
+            opacity: 1;
+        }
 
-  <style>
-    .image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+        .hovertext {
+            color: gold;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            }
+            
+            .jumbotron{
+                background-color: gold;
+            }
 
-.overlay {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: yellow;
-  overflow: hidden;
-  width: 100%;
-  height:0;
-  transition: .5s ease;
-}
-
-
-.container:hover .overlay {
-  bottom: 0;
-  height: 100%;
-}
-
-.text {
-  color: black;
-  font-size: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-body{
-  background-color: rgb(24, 21, 21);
-  color: yellow;
-}
-
-.jumbotron{
-  background-color: rgb(24, 21, 21);
-}
+            /* p {
+                color: rgb(0, 0, 0);
+            } */
 
 
     </style>
+
+
+
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mad Scientist</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Board of Directors</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">MAD SCIENTIST</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-  <main role="main">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">Welcome!</h1>
-        <p>The Mad Scientist club promotes engineering, technology and computer science hands-on project to prepare
-          students for their work in the real word</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-      </div>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text">Welcome!</h1>
+            <p class="text">The Mad Scientist club works on the application of engineering, technology and computer science theory
+                to awesome hands-on projects</p>
+        </div>
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <!-- <img src="img_avatar.png" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Hello World</div>
-  </div> -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Projects</div>
+                    <div class="panel-body">
+                        <div class="overlay">
+                            <div>
+                                <p class="hovertext">View current and previous projects</p>
+                            </div>
+                        </div>
+                        <img src="https://images.freeimages.com/images/large-previews/687/project-3-1237445.jpg" class="img-responsive"
+                            alt="Project">
 
-        <div class="col-md-4">
-          <h2>Projects</h2>
-          <i class="fas fa-project-diagram fa-10x"></i>
-          <div class="overlay">
-            <div class="text">Mad Scientist has projects for anyone interested in renewable energy, mechanical design,
-              microcontroller programming and more</div>
-          </div>
-          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Board</div>
+                    <div class="panel-body">
+                        <div class="overlay">
+                            <div>
+                                <p class="hovertext">Meet the club's board members and learn a little about them</p>
+                            </div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1527153818091-1a9638521e2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                            class="img-responsive" alt="Team">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Wish to join?</div>
+                    <div class="panel-body">
+                        <div class="overlay">
+                            <div>
+                                <p class="hovertext">Get in contact with us or visit our lab at E&T A1 anytime</p>
+                            </div>
+                        </div>
+                        <img src="https://images.freeimages.com/images/large-previews/7af/magnifying-glass-1546976.jpg"
+                            class="img-responsive" alt="Curious">
+
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="col-md-4">
-          <h2>Officers</h2>
-          <i class="fas fa-users fa-10x"></i>
-          <div class="overlay">
-            <div class="text">Meet the team</div>
-          </div>
-          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
-        </div>
 
-        <div class="col-md-4">
-          <h2>Contact Us</h2>
-          <i class="fas fa-question fa-10x"></i>
-          <div class="overlay">
-            <div class="text">Contact us if you have any questions or concerns</div>
-          </div>
-          <!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> -->
-        </div>
-      </div>
-
-      <hr>
-
-    </div> <!-- /container -->
-
-  </main>
-
-  <footer class="container">
-    <p>&copy; Company 2017-2018</p>
-  </footer>
-
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="../../assets/js/vendor/popper.min.js"></script>
-  <script src="../../dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
